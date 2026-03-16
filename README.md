@@ -20,24 +20,8 @@ Synthetic patient data generated using Synthea (with Java), and exported out int
 3. condition.csv: contains information on diagnosis
 4. procedures: contains information on procedural activities by department
 
-## Database & Tables 
-The following tables chave been imported from Synthea (csv format) into the SQL server and used in this report 
+## SQl queries 
+Refer to the attached sql file for queries for the initial preliminary analysis 
 
-### patients 
-Contains demographic   for 1, 176 synthetic patients
-![patients table](screenshots/patients-top5.png)
-
-### encounters 
-Contains all hospital visits and admissions per patient. Each row represents one encounter linked to a patient. 
-![encounters table](screenshots/encounters-top5.png)
-
-### conditions 
-Contains diagnoses recorded per encounter. Linked to both patients and encounters via foreign keys. 
-![conditions table](screenshots/conditions-top5.png)
-
-## SQL queries
-(refer to attached sql file) 
-
-## How to run this project 
-
-## Key learnings & challenges 
+## RDL report
+Refer to the attached rdl for a preview of the paginated report 

@@ -1,4 +1,4 @@
-# synthea-hospital-ssrs-report
+# synthea-hospital-ssrs-report (in progress)
 A paginated SSRS report built on synthetic hospital data, demonstrating SQL server data extraction, data modelling and report development 
 
 # Tools & Environment 
@@ -6,8 +6,6 @@ A paginated SSRS report built on synthetic hospital data, demonstrating SQL serv
 - SQL Server Management Studio
 - Visual Studio (Microsoft Reporting Services Project) 
 - Synthea (tool built by MIT researchers that generates fake but realistic hospital data)
-
-
 
 ## Business Questions 
 1. How many encounters per department and the average length of stay?
@@ -37,32 +35,9 @@ Contains all hospital visits and admissions per patient. Each row represents one
 Contains diagnoses recorded per encounter. Linked to both patients and encounters via foreign keys. 
 ![conditions table](screenshots/conditions-top5.png)
 
-### procedure 
-Contains clinical procedure performed during each encounter. 
-![procedures table](screenshots/procedures-top5.png)
-
-
-## Data Quality Analysis 
-
-| Check | Result | Action Taken |
-|---|---|---|
-| Missing admission dates | 0 | None required |
-| Missing discharge dates | 0 | None required |
-| Patients wth no encounters | 0 | None required |
-| Encounters with no diagnosis | 42, 759 | For further review | 
-
-![No Diagnosis Count](screenshots/no-diagnosis-by-encounter-class)
-
-All encounters were retained with a left join on the conditions table, ensuring no encounters are excluded due to missing diagnosis. 
-
-### Key Findings 
-Wellness encounters tend to be routine preventive visits and hospice (end of life care) diagnosis are already pre- established. Inpatient and emergency encounters are flagged for further review as they should have a recorded diagnosis. 
-
 ## SQL queries
+(refer to attached sql file) 
 
 ## How to run this project 
 
 ## Key learnings & challenges 
-
-
-
